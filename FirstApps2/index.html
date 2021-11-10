@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> <!--   !+Tab tuşu ile aşağıdaki HTML iskeletini hızlıca (Emmet) oluşturabilirsiniz. -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--    "ul>li" + tab ifadesini kullanarak kardeş element oluşturuyoruz. Şöyle: -->
+
+    <ul>
+        <li></li>
+    </ul>
+
+    <!-- ul tagı içinde li tagı oluşturduktan sonra ul tagı dışında bir p tagı eklemek
+     için "ul>li^p" + tab ifadesini kullanıyoruz. Şöyle: -->
+
+     <ul>
+         <li></li>
+     </ul>
+     <p></p>
+
+     <!-- "ul>li*3" + tab veya "ul>li+li+li" + tab yaparak ul tagı içerisinde 3 adetli
+        tag oluşturabiliriz. Şöyle: -->
+    
+     <ul>
+         <li></li>
+         <li></li>
+         <li></li>
+     </ul>
+
+    <!-- class özelliği vermek için "." ifadesini kullanırız. 
+    Örneğin "ul.class1>li.class2" + tab tuşuna basıldığında şöyle oluşur: -->
+
+    <ul class="class">
+        <li class="class2"></li>
+    </ul>
+
+    <!-- Bir id özelliği eklemek için ise # ifadesini kullanırız. örneğin
+         "ul#id1>li#id2" + tab diyerek aşağıda gördüğünüz kodu oluşturabiliriz: -->
+
+         <ul id="id1">
+             <li id="id2"></li>
+         </ul>
+
+    <!-- "+" ve "*" ifadesinin farkını da daha kolay anlayabiliriz. Örneğin ul tagının içine 
+        aynı id’ye sahip 3 adet li eklemek istiyorsak * ifadesi kullanılabilir. Fakat amacım 
+        farklı id’lere sahip üç adet li tagı oluşturmaksa "ul>li#id1+li#id2+li#id3" + tab 
+        yapılır: -->     
+
+        <ul>
+            <li id="id1"></li>
+            <li id="id2"></li>
+            <li id="id3"></li>
+        </ul>
+
+   <!-- Otomatik artış sağlayan değerleri tek tek yazmak yerine otomatik artan şeklinde de
+    yapabiliriz. Emmet bunun için de bir kısa yola sahip "$" ifadesidir. Yani yukarda görmüş
+     olduğunuz "ul>li#id1+li#id2+li#id3" şeklinde yazdığımız kod bloğunu çok daha basit bir 
+biçimde "ul>li#idNo$*3" diyerek yazabiliriz. -->
+
+          <ul>
+              <li id="idNo1"></li>
+              <li id="idNo2"></li>
+              <li id="idNo3"></li>
+          </ul>
+
+    <!--Tagların içine text yazılmasının da kısa yolu bulunmaktadır. Textlerimizi 
+        "{}" ifadesinin içine şu şekilde "p{Emmet ile tag içine text yazma}" + tab yazmak 
+        yeterlidir. -->   
+        
+        <p>Emmet ile tag içine yazı yazmanın kolay yolu</p>
+
+    <!--Kodumuzda içerik olmadığı zamanlarda kullandığımız anlamsız yazıları yani 
+        “lorem ipsum”ları oluşturmak için kullanıyoruz. Bunun için şu kısayolu 
+        kullanabilirsiniz: "p>lorem" + tab yaptığınızda  bir çıktı alacaksınız.  --> 
+        
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quisquam 
+            doloribus illo veniam quas consequuntur! Esse nam ipsa, cumque quam, 
+            repellendus nemo incidunt error laborum enim dolorem possimus 
+            expedita officia.</p>
+
+     <!--Yukarıdaki gibi uzun bir lorem yazısı istemiyorsanız yapmanız gereken tek şey 
+        lorem yazdıktan sonra yanına kaç kelimeli bir lorem oluşturmak istediğinizi 
+        eklemek. Örneğin 5 kelimeli bir lorem yazısı istiyorsunuz. Bunun için "p>lorem5" + 
+      tab yapmanız yeterlidir.   -->  
+
+      <p>Lorem ipsum dolor sit amet.</p>
+
+      <!--Emmet’in son bir özelliğine daha değinelim. "li.className" + tab yaptığımızda 
+        className class’ına ait bir li tag oluşur. -->
+
+        <li class="className"></li>
+        
+      <!--  Herhangi bir tag koymaksızın sadece ".className" + tab yaparsak div tagı 
+    içinde className class oluşur.  -->
+
+       <div class="className"></div>
+
+     <!--Emmet ile ilgili diğer tüm özelliklere bu url'den ulaşabilirsiniz:
+    https://docs.emmet.io/cheat-sheet/     -->  
+
+</body>
+</html>
