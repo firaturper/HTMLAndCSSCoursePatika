@@ -1,0 +1,166 @@
+<!--
+
+    ***HTML Etiketlerine Ekstra Özellikler Eklemek***
+Bu ek özellikler Türkçe kaynaklarda HTML etiketlerinin nitelikleri, özellikleri veya 
+öznitelikleri diye geçmektedir.
+
+Özellikler:
+
+1- Tüm HTML elementleri nitelik alabilirler.
+
+2- Her zaman başlangıç elemanının içine yazılır.
+ <a href = ""></a>
+
+3- Bu nitelikler, etiketler konusunda ekstra özellik bilgisi sağlar.
+
+4- Kelimeler arasında tire işareti koyarak(html-etiketi) veya camel case(htmlEtiketi) 
+şeklinde kullanılabilir. HTML'de genellikle - (tire) kullanılır. 
+
+5- class veya id gibi özniteliklerin ismi belirlerken Türkçe karakter tercih edilmemelidir.
+ (ş,ç,ö,ü,ğ,büyük İ ve küçük ı) 
+ 
+6- Kullanabilmek için özniteliği yazdıktan sonra ="" kullanılıp istediğimiz özelliği
+ tırnakların içine yazılmalıdır..
+
+*********************************************
+
+Her etikete id ve class özniteliklerini ekleyebiliriz.
+
+* <img src ="" alt = "" id ="">
+
+* <img src ="" alt = "" class ="" id ="">
+
+* <a href ="" id="" class ="" data-id ="" ></a>
+
+**************************************************
+
+***id (identity = kimlik)***
+
+* id kullanılan etiketin kimliğini belirtir. Biriciktir*(unique)* yani dökümanın 
+içindeki bir etikete yalnızca bir kez o id ismi verilebilir.
+
+<a href ="https://www.facebook.com/" id ="facebook-URL" ><a>
+
+Buradaki id yi kullanarak direkt olarak bu HTML etiketine ulaşabiliriz.
+
+Not: id biricik olduğu için istisna olarak id = facebook-URL şeklinde yazarak
+ tırnak işareti kullanmayabiliriz.
+
+***class (sınıf)***
+
+class, HTML etiketinin hangi sınıfta olduğunu belirmemizi sağlar. Aynı sınıf adını 
+birden fazla HTML etiketine verebiliriz.
+
+<img src ="" class ="documents">
+
+<a href ="" class ="documents" ></a>
+
+Burada görüldüğü gibi iki HTML etiketi de(img ve a) documents sınıfında bulunmaktadır. 
+Daha sonrasında aynı sınıfta bulunan bu iki etikete CSS ile aynı anda değişiklik 
+yapılabilir.
+
+**************************************************
+
+* <meta> : Sayfamızı tanımlayan açıklamaların bulunduğu kısımdır. Sayfa açıklaması, 
+sayfa başlığı, kullanılan karakter seti tanımlaması gibi işlemler burada tanımlanıyor.
+
+* <title>: Tarayıcı penceresinin sekmesindeki başlığı buradan belirtiyoruz.
+
+* <style>: Sayfada kullanılan stil işlemlerinin tanımlaması yapılır. Örneğin arka plan
+rengi yazı rengi ya da nesnelerin hizalanması gibi işlemler.
+
+**********************************************
+
+***Semantic(Anlamlandırılmış) HTML Etiketleri Kullanımı***
+
+Semantik, anlam veya anlamlandırma anlamı ifadesi taşımaktadır. O halde 
+semantik elementler herhangi bir anlamı olan etiketler ifadesi taşımaktadır.
+ Semantik olarak anlamlandırılmış bir element hem tarayıcıya hem geliştiriciye 
+ ne anlama geldiğini açık bir şekilde belirtir. <div> ve <span> gibi elementler 
+semantik olmayan elementlerdir ve mevcut içeriğin hakkında bilgi vermezler. 
+<form>, <table> ve <img> gibi elementler semantik elementlerdir ve içeriği 
+açıkça belirtirler. (Semantic aramasını google görsellerden yapıldığında ortaya bir
+şema çıkacaktır. O şemayı incelemekte fayda var.)
+
+*header elementi*
+
+header elementi bir doküman veya bir <section> için bir başlık olduğunu belirtir.
+İçinde barındırdığı içeriği kapsayıcı olmalıdır. Bir dokümanda birden fazla kullanılabilir.
+Aşağıdaki örnek, bir <article> için bir başlık içermektedir.
+
+*nav elementi*
+
+nav elementi navigasyon bağlantıları büyük sayfalar için ortaya çıkarılmıştır. Fakat, 
+sayfadaki tüm linkler bu element içinde olmak zorunda değildir.
+
+<nav> Bootcamp CS50X Kodluyoruz Jr. Şirketler Hakkımızda </nav>
+
+*<section> elementi*
+
+    Section elementi bir doküman içinde olan sadece bir kısmı belirtir.
+
+*figure Elementi*
+
+İçeriğinde resim, gösterim, diyagram, kod listeleri vs. gibi nesnelerin olduğunu
+ belirtir. Ana akış ile ilgili olsa da, konumu ana akıştan tamamen bağımsızdır. 
+ Çıkarılırsa dokümanın akışını engellemez.
+
+*figcaption Elementi*
+
+<figcaption> etiketi, <figure> elementinin belirttiği resme başlık koymaya yarar.
+
+*aside Elementi*
+
+<aside> elementi içerdiğinden farklı olarak daha başka bazı içerikleri tanımlar. 
+İçeriği, üst içerik hakkında olmalıdır.
+
+*article Elementi*
+
+<article> elementi bir makale elementidir. Bir makale web sayfasının geri kalanından 
+bağımsız olarak dağıtılabilmelidir. Genelde bu elementin kullanabildiği yerler forum 
+mesajları, blog gönderileri, haber metinleri, yorumlar gibi makale içeren metinlerdir.
+
+*footer Elementi*
+
+<footer> elementi bir doküman ya da kısım için alt bilgilerini belirtir. Bir<footer>
+genelde dokümanın yazarını, telif haklarını, kullanım gizliği, iletisim vs. 
+gibi bilgileri içerir ve bir dokümanda bir kereden fazla kullanılabilir.
+
+
+************************************************************
+
+Diğer HTML Etiketleri Hakkında
+HTML öğrenirken sıkça sorulan bir soru tüm etiketlerin öğrenilmesi gerekip 
+gerekmediğidir. HTML güncel olarak 100’den fazla etiket içerir ancak bunların
+ hepsini öğrenmek mümkün değildir. Günümüzde birçok HTML sayfası semantik 
+ elementler ve 10-12 adet semantik olmayan etiket ile oluşturulabilir.
+
+h1 - Başlık
+
+p - Paragraf
+
+i / em - Eğik / Vurgulu Yazı
+
+b / strong - Kalın / Koyu Yazı
+
+a - Link
+
+ul & li  - Sırasız liste ve liste elemanı
+
+blockquote - Alıntı
+
+hr - Yatay çizgi ekleme
+
+img - Görsel
+
+div - Bölme 
+
+Yukarıda yaygın kullanılan semantik olmayan etiketler ve görevleri verilmiştir. Bunlar
+dışında bir etikete ihtiyaç duyulduğunda istenen fonksiyona dair yapılacak araştırmayla
+ilgili etikete ulaşılabilir.
+
+Emmet
+HTML ve CSS etiketlerinde kullanım kolaylığı sağlaması açısından Emmet oldukça faydalı
+bir eklentidir. Kısaltılmış kod yapıları yardımıyla uzun kod blokları oluşturmayı sağlar.
+
+-->
