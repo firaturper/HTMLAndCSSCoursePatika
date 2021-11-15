@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnCSS1</title>
+</head>
+<body>
+    
+<!--
+    CSS(Cascading Style Sheets) 
+
+CSS (Basamaklanmış Stil Katmanları), web sayfasını şekillendirmek için kullanılan
+bir kodlama türüdür. CSS kullanarak web sayfasının görünümünü ve düzenini değiştirebiliriz.
+
+CSS'e HTML öğesini nasıl bulacağını söylememiz gerekir. Bunu selector denen bir özellik 
+ile yapabiliriz. CSS'de bir selector, HTML öğelerini etiket adı, sınıf adı, kimliği ve
+çok daha fazlasına göre bulmak için kullanılır.
+
+O zaman şimdi HTML öğesi için bir selector tanımlayalım ve ardından selector parantezleri
+arasında her biri noktalı virgülle biten CSS kurallarını bildirelim.
+
+h1 { color: red;  }
+
+Böylelikle, tanımlı selector'e (h1) bağlı olarak, CSS artık yeni kuralların nereye
+uygulanacağını anlayabilir.
+
+Bunların yanı sıra CSS kodlarımızı .css uzantılı bir dosya içerisinde tutar ve bu dosyayı
+ HTML sayfası içerisine basit bir kodla çağırabiliriz. Örneğin CSS dosyamızın adı 
+ "hello.css" olsun ve bu dosyayı Html sayfaya eklemek için HTML içine yazmamız 
+ gereken kod şu şekildedir.
+
+ <head> <link rel=”stylesheet” type=”text/css” href=”hello.css” /> </head>
+
+Bir CSS selector tanımlamanın birçok farklı yolu vardır, aşağıda selector türlerinin
+bazı örneklerini görebilirsiniz:
+
+- Class Selector: HTML öğelerini sınıf özelliklerine göre bulur.
+- ID Selector: Öğeleri belirli kimliğine göre bulur.
+- Element Selector: Öğeleri etiket adlarına göre bulur.
+
+CSS teknik olarak kolaydır. Anlaşılması gereken sınırlı sayıda kural vardır.
+Bununla birlikte, CSS'i zorlaştıran potansiyel kural kombinasyonudur. Görsel 
+gereksinimler daha karmaşık hale geldikçe, CSS kurallarınızın sürdürülebilirliğini
+kontrol altında tutmak için yaratıcı ancak yapılandırılmış çözümlere ihtiyaç vardır.
+
+********************************************************************
+
+CSS EKLEMENİN 3 YOLU 
+
+**1. Yol: Inline CSS'in etiket içinde kullanıldığı Inline CSS'i tek bir etikette 
+değişiklik yapmak isteğinildiğinde ve diğer etiketlerin bu değişiklikten etkilenmesini
+istenilmediğinde kullanılması gerektiği,
+
+**2. Yol: Internal CSS Head kısmında style etiketi içinde seçiciler kullanıp süslü
+ parantez içinde kullandığımız seçici veya etiket özelliklerini belirterek 
+ kullanılabileceğimizi,
+ 
+ **3.Yol: External CSS Link belirterek tek bir CSS dosyası içerisinde CSS kodlarını 
+ yazarak bütün HTML sayfalarına nasıl stil şablonu oluşturulabileceği anlatılmıştır.
+
+CSS kuralları, web sitenizin HTML dosyalarına çeşitli şekillerde ve yerlerde 
+uygulanabilir. External yani harici bir stil sayfası, Internal yani dahili bir stil
+sayfası veya Inline yani satır içi stil kullanabilirsiniz. Her yöntemin belirli
+kullanımlara uygun avantajları vardır.
+
+
+**************************************************************************
+
+* CSS'de açıklama satırı bu şekilde başlar /* ve bu şekilde biter */
+
+* CSS'de beş genel yazı tipi ailesi vardır.
+
+* Yazı tipi adı birden fazla kelime ise, "Times New Roman" gibi tırnak içinde olmalıdır.
+
+    .p1 {
+     font-family: "Times New Roman";
+    }
+
+* font-style çoğunlukla italik metnini belirtmek için kullanılır.
+
+ p.italic {
+      font-style: italic;
+     }
+
+* CSS'de font-size metnin boyutunu ayarlar.
+
+ h2 {
+      font-size: 30px;
+     }
+
+* Em ile Yazı Tipi Boyutunu Ayarla
+
+Kullanıcıların metni yeniden boyutlandırmasına izin vermek için (tarayıcı menüsünde),
+birçok geliştirici piksel yerine em kullanır. 1em, mevcut yazı tipi boyutuna eşittir. 
+Tarayıcılarda varsayılan metin boyutu 16 pikseldir. Yani, 1em'in varsayılan boyutu
+16 pikseldir.
+
+h1 {
+      font-size: 2.5em; /* 40px/16=2.5em */
+     }
+
+*********************************************************************************
+
+Class ve ID Kullanımı
+
+Aşağıda html elementlerine nasıl stil özellikleri eklediğimize bakalım.
+
+<p>Bugün kodluyoruz</p>
+<p>Yarın da kodluyoruz<p>
+p {
+	color: red;
+}
+
+Yukarıda görüldüğü üzere iki farklı <p></p> elementimize kırmızı renk özelliği eklemiş
+ olduk. Fakat sadece belirli <p></p> elementine istediğimiz herhangi bir özelliği eklemek 
+ istersek ne yapacağız? Bu durumda class veya id seçicilerini kullanmamız gerekiyor.
+
+***class Kullanımı
+Class seçicisi, HTML üzerinde aynı class’a sahip elemana ulaşmamızı sağlar. Class 
+seçicisi CSS’de . ile belirtilir. 
+
+.text-red{
+   color:red;
+}
+
+<h4>Birinci Başlık</h4>
+<h4 class="text-red">İkinci Başlık</h4> //Sadece burası kırmızı olur
+<h4>Üçüncü Başlık</h4>
+
+***id Kullanımı
+
+ID seçicisi, HTML üzerinde aynı id’ye sahip elemana ulaşmamızı sağlar. ID seçicisi 
+CSS’de # ile belirtilir. ID seçicisinin kullanım amacı olarak class seçicisinden bir 
+farkı yok diyebiliriz. İkisi de belirli HTML elementlerine CSS özellikleri eklemeye 
+yöneliktir. Fakat id seçicisinin class seçicisinden bazı farkları vardır. Bir html 
+elementinin sadece bir tane id’si olabilir.
+
+<h4 id="main-title">Birinci Başlık</h4>
+<h4>İkinci Başlık</h4>
+#main-title{
+	color:red;
+}
+
+
+-->
+
+</body>
+</html>
