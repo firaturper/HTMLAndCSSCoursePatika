@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Kutu Özellikleri</title>
+</head>
+<body>
+
+<!--
+
+********CSS Kutu Özellikleri(Margin, Padding, Width, Height) Kullanımı************    
+
+CSS kutu özelliklerini iyi kavrayabilmek ve kullanabilmek için "kutu model" 
+konusunu incelemek gerekir:
+
+https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/css/css-kutu-ozelliklerimargin%2C-padding%2C-width%2C-height-kullanimi/figures/boxmodel_.png
+
+Kutu modeli margin,padding,border ve içerikten oluşur.
+
+*İçerik(content): Elementin içinde olan resim, ses ya da yazıdır.
+*Padding: İçerik ile border arasında olan boşluk.
+*Border: Padding ile margin'i ayıran sınırdır.
+*Margin: Kutunun diğer kutularla arasındaki mesafeyi ayarlayan boşluk.
+
+Yukarıda saydığım kavramların dışında kutunun boy ve uzunluğunu belirleyen 
+width ve height kavramları vardır.
+
+----width ve height Kullanımı---------
+
+width ve height özellikleri ile elementin boy ve genişliğini ayarlayabiliriz. Bu
+özellikleri biz yazmadığımız takdirde tarayıcı kendisi ayarlar ve yapacağımız web 
+uygulamasında istenmeyen sonuçlara neden olur. Bu özellikleri px, em veya % ile 
+kullanabiliriz. % ile kullandığımız zaman elementimiz hangi elementin içindeyse 
+ona göre oranlanır. Yani 800px boyunda bir <div> tag'inin içinde bulunan bir 
+elementin boyunu 50% olarak ayarlarsanız elementin boyu 400px olur.
+
+Max-width; özelliği ise bir elementin genişliğini sınırlamak istediğimizde kullanırız. 
+Diyelim ki bir element tarayıcı ekranından fazla geniş veya uzun. Bu durumda 
+scrollbar(kaydırma çubuğu) çıkar.
+
+----Margin Kullanımı---------
+
+Margin özelliği ile elementin dışında boşluk oluşturmada kullanıldığını öğrenmiştik.
+Şimdi nasıl kullanıldığını açıklamaya çalışacağız.
+
+ margin özelliğini 50px yaptığınızda elementin dört yanında 50px boşluk oluşturulur. 
+ Element sağa doğru kayar. Negatif değerler de kullanılabilir. margin değerine -50px 
+ yazdığınız takdirde element sola doğru kayacaktır. Dört yanında değil de sadece bir
+ yönde boşluk oluşturmak isteyebilirsiniz. Bunun için de özellikler vardır.
+
+* margin-left: Soldan boşluk bırakır.
+* margin-top: Yukarıdan boşluk bırakır.
+* margin-bottom: Aşağıdan boşluk bırakır.
+* margin-right: Sağdan boşluk bırakır.
+Bu değerleri tek bir satırda ayarlamanız mümkündür.
+
+margin: 100px 150px 60px 50px;
+
+
+Bir elementi ortalamak için margin:auto değeri vermelisiniz. Bunun düzgün çalışması 
+için de width özelliğinin de kullanılmasını öneririm. Böylelikle sağdan ve soldan eşit 
+olarak ortalanmış olur. Aksi halde boyutu belli olmayan bir kutuyu ortalamayabilir.
+
+----Padding Kullanımı---------
+
+Padding özelliği elementin içindeki yazıların çerçeve(border) ile mesafesini padding 
+ile ayarlarız. margin özelliğinde olduğu gibi padding:50px yaptığımızda içeriğin 
+her tarafı için 50px boşluk bırakıyoruz. Belirli bir tarafta padding bırakmak için yine
+aynı şekilde:
+
+*padding-top: içeriğin yukarısında boşluk bırakır.
+*padding-bottom: içeriğin aşağısında boşluk bırakır.
+*padding-left: içeriğin solunda boşluk bırakır.
+*padding-right: içeriğin sağında boşluk bırakır.
+
+Bunları tek tek tanımlamak yerine tek bir satırda belirlemek mümkündür.
+
+padding: 10px 20px 30px 40px; //üst-sağ-alt-sol
+padding: 10px 20px 30px;   //üst-sağ-alt
+
+
+
+
+
+
+
+
+-->
+
+    
+</body>
+</html>
